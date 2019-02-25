@@ -1,0 +1,25 @@
+.header {
+  grid-area: header;
+  width: 100%;
+  height: var(--header-height);
+  display: flex;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+.container {
+  composes: container from 'layouts/common.css';
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+
+  & > * + * {
+    margin-left: 16px;
+  }
+}

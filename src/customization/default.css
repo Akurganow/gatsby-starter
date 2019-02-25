@@ -1,0 +1,81 @@
+/* stylelint-disable custom-property-empty-line-before, declaration-colon-space-after */
+:root {
+  --font-sans:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
+  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Lucida Console", "Courier New", monospace;
+  --font-base: 1rem;
+
+  --padding-base: calc(var(--font-base) * 2);
+  --container-width: calc(var(--padding-base) * 32);
+  --header-height: calc(var(--font-base) * 3);
+
+  --bd-radius: 4px;
+  --transition-time: 150ms;
+  --transition-easeing: ease-out;
+  --default-transition:
+    box-shadow var(--transition-time) var(--transition-easeing),
+    color var(--transition-time) var(--transition-easeing),
+    background-color var(--transition-time) var(--transition-easeing),
+    border-color var(--transition-time) var(--transition-easeing);
+
+  --color-text: hsla(0, 0%, 0%, 1);
+
+  --color-bg: hsla(0, 0%, 100%, 1);
+  --color-bg-default: hsla(0, 0%, 95%, 1);
+  --color-bg-hover: hsla(0, 0%, 97%, 1);
+  --color-bg-active: hsla(0, 0%, 90%, 1);
+  --color-bg-primary: hsla(249, 32%, 95%, 1);
+  --color-bg-primary-hover: hsla(249, 32%, 97%, 1);
+  --color-bg-primary-active: hsla(249, 32%, 90%, 1);
+  --color-bg-secondary: hsla(17, 84%, 95%, 1);
+  --color-bg-secondary-hover: hsla(17, 84%, 97%, 1);
+  --color-bg-secondary-active: hsla(17, 84%, 90%, 1);
+
+  --color-bd: hsla(0, 0%, 35%, 1);
+  --color-bd-default: hsla(0, 0%, 85%, 1);
+  --color-bd-transparent: hsla(0, 0%, 95%, 0);
+  --color-bd-hover: hsla(0, 0%, 82%, 1);
+  --color-bd-primary: hsla(249, 32%, 85%, 1);
+  --color-bd-primary-hover: hsla(249, 32%, 82%, 1);
+  --color-bd-primary-transparent: hsla(249, 32%, 95%, 0);
+  --color-bd-secondary: hsla(17, 84%, 85%, 1);
+  --color-bd-secondary-hover: hsla(17, 84%, 82%, 1);
+  --color-bd-secondary-transparent: hsla(17, 84%, 95%, 0);
+
+  --color-outline-default: hsl(0, 0%, 70%);
+  --color-outline-primary: hsl(249, 32%, 70%);
+  --color-outline-secondary: hsl(17, 84%, 70%);
+
+  --color-primary: hsla(249, 32%, 35%, 1);
+  --color-primary-transparent: hsla(249, 32%, 35%, 0);
+  --color-secondary: hsla(17, 84%, 50%, 1);
+  --color-secondary-transparent: hsla(17, 84%, 50%, 0);
+
+  @media (max-width: 1024px) {
+    --font-base: calc(0.875rem + 2.66 * (100vw - 480px) / (1200 - 480));
+    --container-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    --padding-base: calc(var(--font-base) * 1.5);
+  }
+
+  @media (max-width: 480px) {
+    --font-base: 0.875rem;
+    --padding-base: var(--font-base);
+  }
+
+  @media (min-width: 1200px) {
+    --font-base: 1.125rem;
+  }
+}

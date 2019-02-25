@@ -1,0 +1,60 @@
+.input {
+  --bd-color: var(--color-bd-default);
+  --bg-color: var(--bg);
+  --outline-color: var(--color-bd-default);
+  --outline-color-transparent: var(--color-bd-transparent);
+  --text-color: var(--color-text);
+  --padding: calc(var(--font-base) / 4) var(--font-base);
+  --font-size: var(--font-base);
+
+  height: var(--font-size);
+  font-size: var(--font-size);
+  line-height: 1;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-radius: var(--bd-radius);
+  border: 1px solid var(--bd-color);
+  padding: var(--padding);
+  outline: none;
+  transition: var(--default-transition);
+  box-sizing: content-box;
+
+  &:focus {
+    box-shadow: 0 0 3px 1px var(--outline-color);
+    animation: input-shadow var(--transition-time) var(--transition-easeing);
+  }
+}
+
+.input.primary {
+  --bd-color: var(--color-bd-primary);
+  --outline-color: var(--color-bd-primary);
+  --outline-color-transparent: var(--color-bd-primary-transparent);
+
+  &:focus {
+    --bd-color: var(--color-bd-primary-hover);
+  }
+}
+
+.input.secondary {
+  --bd-color: var(--color-bd-secondary);
+  --outline-color: var(--color-bd-secondary);
+  --outline-color-transparent: var(--color-bd-secondary-transparent);
+
+  &:focus {
+    --bd-color: var(--color-bd-secondary-hover);
+  }
+}
+
+@keyframes input-shadow {
+  0% {
+    box-shadow: 0 0 0 var(--outline-color), 0 0 0 0 var(--bg), 0 0 3px 1px var(--outline-color);
+  }
+
+  25% {
+    box-shadow: 0 0 0 var(--outline-color), 0 0 2px 5px var(--bg), 0 0 2px 5px var(--outline-color);
+  }
+
+  100% {
+    box-shadow: 0 0 3px 1px var(--outline-color), 0 0 5px 10px var(--bg), 0 0 5px 10px var(--outline-color-transparent);
+  }
+}

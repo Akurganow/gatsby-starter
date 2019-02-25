@@ -1,0 +1,18 @@
+[
+  {
+    "lang": "en",
+    "localName": "English",
+    "locale": "en",
+    "fileName": "en.json",
+    "hasIntlData": true,
+    "storeToServer": true
+  },
+  {
+    "lang": "ru",
+    "localName": "Русский",
+    "locale": "ru",
+    "fileName": "ru.json",
+    "hasIntlData": true,
+    "storeToServer": true
+  }
+]
