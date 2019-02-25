@@ -66,7 +66,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── package.json
     └── README.md
 
-  1. **`/.storybook`**:
+  1. **`/.storybook`**: This directory will contain configuration files for [Storybook](https://github.com/storybooks/storybook). Storybook is a development environment for UI components.
 
   2.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
 
