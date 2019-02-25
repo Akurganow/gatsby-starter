@@ -1,4 +1,6 @@
 const path = require('path');
+const getAliases = require('./scripts/aliases')
+const alias = getAliases(__dirname)
 
 module.exports = {
   parser: 'babel-eslint',
@@ -105,13 +107,7 @@ module.exports = {
         config: {
           resolve: {
             extensions: ['.js', '.jsx', '.json'],
-            alias: {
-              'src': path.resolve(__dirname, 'src'),
-              'assets': path.resolve(__dirname, 'src/assets'),
-              'components': path.resolve(__dirname, 'src/components'),
-              'layouts': path.resolve(__dirname, 'src/layouts'),
-              'libs': path.resolve(__dirname, 'src/libs'),
-            },
+            alias,
           },
         },
       },

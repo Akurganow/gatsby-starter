@@ -1,5 +1,7 @@
 /* eslint-disable global-require */
-const aliases = require('./scripts/aliases')
+const getAliases = require('./scripts/aliases')
+
+const aliases = getAliases(process.cwd())
 
 module.exports = {
   siteMetadata: {

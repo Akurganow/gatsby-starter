@@ -1,12 +1,11 @@
 const path = require('path')
 
-module.exports = {
-  src: path.resolve(process.cwd(), 'src'),
-  assets: path.resolve(process.cwd(), 'src/assets'),
-  libs: path.resolve(process.cwd(), 'src/libs'),
-  pages: path.resolve(process.cwd(), 'src/pages'),
-  components: path.resolve(process.cwd(), 'src/components'),
-  layouts: path.resolve(process.cwd(), 'src/layouts'),
-  store: path.resolve(process.cwd(), 'src/store'),
-  utils: path.resolve(process.cwd(), 'utils'),
-}
+module.exports = dirname => ({
+  src: path.resolve(dirname, 'src'),
+  assets: path.resolve(dirname, 'src/assets'),
+  libs: path.resolve(dirname, 'src/libs'),
+  pages: path.resolve(dirname, 'src/pages'),
+  components: path.resolve(dirname, 'src/components'),
+  layouts: path.resolve(dirname, 'src/layouts'),
+  types: path.resolve(dirname, 'src/types'),
+})

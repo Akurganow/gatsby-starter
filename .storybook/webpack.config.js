@@ -1,4 +1,6 @@
-const aliases = require('../scripts/aliases')
+const getAliases = require('./scripts/aliases')
+
+const aliases = getAliases(process.cwd())
 
 module.exports = (baseConfig, env, defaultConfig) => {
   defaultConfig.module.rules[0].exclude = /node_modules\/(?!(gatsby)\/)/
