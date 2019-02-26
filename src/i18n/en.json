@@ -1,3 +1,16 @@
 {
-  "header-home": "Home"
+  "header-home": "Home",
+
+  "global-title": "Hi, people",
+  "global-welcome": "Welcome to your new Gatsby site.",
+  "global-lorem-1": "Duis quis massa sem. Quisque non facilisis massa. Aenean at nibh ultricies, mollis sem vel, condimentum nunc. Maecenas rhoncus risus eget magna ultrices, in gravida lorem molestie. Nulla nec mi at arcu fringilla rutrum ultrices id quam. Ut ut dolor quis nisi dapibus mollis et id leo. Fusce nec nisl ac nunc blandit egestas sed in risus. Nunc facilisis ante nisl, sed condimentum purus efficitur sit amet. Aenean leo mauris, scelerisque sed faucibus ac, accumsan a ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed dui neque, venenatis vel congue vel, vehicula nec felis. Vivamus gravida erat in rutrum commodo. Maecenas eget sapien sem. Donec faucibus vitae ante in maximus. Nulla ut erat ultrices, molestie urna nec, consectetur ipsum. Phasellus suscipit ipsum orci, id rutrum lacus vulputate et.",
+  "global-lorem-2": "Suspendisse feugiat eu neque a vehicula. Aenean fermentum tortor purus, ut lacinia diam ultricies at. Nunc volutpat odio ante, dictum viverra risus dictum et. Nunc nibh ipsum, venenatis at tellus at, varius commodo ipsum. Proin nec consequat mauris. Suspendisse vitae consectetur felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec lacinia sem magna, quis facilisis augue consectetur eget. Pellentesque iaculis lacinia velit, scelerisque placerat massa fringilla a. Pellentesque pharetra tristique sollicitudin.",
+  "global-to_second_page": "To second page",
+
+  "global-second_title": "This is second page",
+  "global-second_welcome": "Welcome to second page of your new Gatsby site.",
+  "global-to_home": "To home",
+
+  "footer-made_by": "Made by",
+  "footer-alex_kurganow": "Alex Kurganov"
 }

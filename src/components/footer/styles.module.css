@@ -1,15 +1,21 @@
 .footer {
-  --bg: var(--color-bg-primary);
-
+  composes: content from 'layouts/common.css';
+  display: block;
   grid-area: footer;
-  background-color: var(--bg);
-  color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-bg);
   box-sizing: border-box;
-}
 
-.container {
-  composes: container from 'layouts/common.css';
-  display: flex;
-  flex-direction: column;
-  padding: calc(var(--font-base) * 2) var(--padding-base) calc(var(--font-base) * 3);
+  a {
+    color: var(--color-bd-primary);
+
+    &:hover,
+    &:focus {
+      color: var(--color-bd-primary-hover);
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding-bottom: calc(var(--font-base) + var(--header-height));
+  }
 }

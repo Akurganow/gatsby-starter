@@ -2,7 +2,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import Context from 'src/customization/context'
+import Context from 'customization/context'
+
+import getUserLang from 'libs/user-lang'
 
 import Header from 'components/header'
 import Footer from 'components/footer'
@@ -10,21 +12,39 @@ import Footer from 'components/footer'
 import './styles.css'
 import 'src/customization/default.css'
 
+const userLang = getUserLang()
+
 class Layout extends Component {
   static propTypes = {
     children: PropTypes.node,
   }
 
+  state = {
+    lang: userLang,
+  }
+
+  changeLang = (lang) => {
+    this.setState({ lang })
+
+    window.localStorage.setItem('akw:user-lang', lang)
+  }
+
   render() {
     const { children } = this.props
+    const { lang } = this.state
 
     return (
       <Context.Provider
-        value={{}}
+        value={{
+          lang,
+          changeLang: this.changeLang,
+        }}
       >
-        <Header />
-        <div className="container">{children}</div>
-        <Footer />
+        <div className="container">
+          <Header />
+          <div className="content">{children}</div>
+          <Footer />
+        </div>
       </Context.Provider>
     )
   }

@@ -8,4 +8,5 @@ module.exports = dirname => ({
   components: path.resolve(dirname, 'src/components'),
   layouts: path.resolve(dirname, 'src/layouts'),
   types: path.resolve(dirname, 'src/types'),
+  customization: path.resolve(dirname, 'src/customization'),
 })

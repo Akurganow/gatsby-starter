@@ -7,7 +7,7 @@ import {
 } from 'react-intl'
 
 import locales from 'src/i18n'
-import getUserLang from 'libs/user-lang'
+import Context from 'customization/context'
 
 locales.forEach(({
   locale, parentLocale, hasIntlData, intlLocaleData,
@@ -21,8 +21,6 @@ locales.forEach(({
     }
   addLocaleData(data)
 })
-
-const defaultLang = 'en'
 
 const localeData = locales.reduce(
   (memo, item) =>
@@ -80,22 +78,27 @@ class WithIntl extends React.Component {
 export const withIntl = ({ ns } = { ns: 'global' }) => Component =>
   class WithIntlProvider extends React.Component {
     render() {
-      const language = getUserLang() || defaultLang
-      const languageWithoutRegionCode = locales.some(loc => loc.lang === language)
-        ? language.toLowerCase().split(/[_-]+/)[0]
-        : defaultLang
-      const localeMessages = localeData[languageWithoutRegionCode] || localeData[language]
-
       return (
-        <IntlProvider
-          messages={localeMessages}
-          locale={languageWithoutRegionCode}
-          key={languageWithoutRegionCode}
-        >
-          <WithIntl ns={ns} {...this.props}>
-            <Component />
-          </WithIntl>
-        </IntlProvider>
+        <Context.Consumer>
+          {({ lang }) => {
+            const languageWithoutRegionCode = locales.some(loc => loc.lang === lang)
+              ? lang.toLowerCase().split(/[_-]+/)[0]
+              : 'en'
+            const localeMessages = localeData[languageWithoutRegionCode] || localeData[lang]
+
+            return (
+              <IntlProvider
+                messages={localeMessages}
+                locale={languageWithoutRegionCode}
+                key={languageWithoutRegionCode}
+              >
+                <WithIntl ns={ns} {...this.props}>
+                  <Component />
+                </WithIntl>
+              </IntlProvider>
+            )
+          }}
+        </Context.Consumer>
       )
     }
   }

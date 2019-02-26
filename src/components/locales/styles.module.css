@@ -1,0 +1,6 @@
+.locales {
+  background-color: transparent;
+  color: var(--color-text);
+  border: none;
+  display: inline;
+}

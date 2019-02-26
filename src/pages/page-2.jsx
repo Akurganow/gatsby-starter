@@ -4,14 +4,14 @@ import Layout from 'layouts/main'
 import Link from 'components/link'
 import T from 'components/translate-message'
 
-const IndexPage = () => (
+const SecondPage = () => (
   <Layout>
-    <T message="title" component="h1" />
-    <T message="welcome" component="p" />
+    <T message="second_title" component="h1" />
+    <T message="second_welcome" component="p" />
     <T message="lorem-1" component="p" />
     <T message="lorem-2" component="p" />
-    <T message="to_second_page" component={Link} to="/page-2" />
+    <T message="to_home" component={Link} to="/" />
   </Layout>
 )
 
-export default IndexPage
+export default SecondPage

@@ -6,10 +6,17 @@
   justify-content: center;
   line-height: 1;
   box-sizing: border-box;
+  background-color: var(--color-bg);
+
+  @media (max-width: 480px) {
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid var(--color-bd);
+  }
 }
 
 .container {
-  composes: container from 'layouts/common.css';
+  composes: content from 'layouts/common.css';
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -18,6 +25,7 @@
 
 .links {
   display: flex;
+  align-items: center;
 
   & > * + * {
     margin-left: 16px;
