@@ -1,4 +1,6 @@
-import langs from 'src/i18n/langs'
+import locales from 'src/i18n'
+
+const langs = locales.filter(loc => loc.lang).map(loc => loc.lang)
 
 export default function getUserLang() {
   const chosenLang = window.localStorage.getItem('akw:user-lang')

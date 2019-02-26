@@ -1,14 +1,9 @@
 import * as React from 'react'
 
 import Context from 'customization/context'
-import langs from 'src/i18n/langs'
+import locales from 'src/i18n'
 
 import st from './styles.module.css'
-
-const localesNames = {
-  ru: 'Русский',
-  en: 'English',
-}
 
 class Locales extends React.Component {
   state = {}
@@ -28,9 +23,9 @@ class Locales extends React.Component {
             }}
             defaultValue={lang}
           >
-            {langs.map(lng => (
-              <option key={lng} value={lng}>
-                {localesNames[lng]}
+            {locales.map(loc => (
+              <option key={loc.lang} value={loc.lang}>
+                {loc.localeName}
               </option>
             ))}
           </select>
