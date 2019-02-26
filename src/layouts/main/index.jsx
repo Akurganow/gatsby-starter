@@ -12,15 +12,13 @@ import Footer from 'components/footer'
 import './styles.css'
 import 'src/customization/default.css'
 
-const userLang = getUserLang()
-
 class Layout extends Component {
   static propTypes = {
     children: PropTypes.node,
   }
 
   state = {
-    lang: userLang,
+    lang: getUserLang(),
   }
 
   changeLang = (lang) => {
