@@ -25,7 +25,7 @@ class Locales extends React.Component {
           >
             {locales.map(loc => (
               <option key={loc.lang} value={loc.lang}>
-                {loc.localeName}
+                {loc.localName}
               </option>
             ))}
           </select>
